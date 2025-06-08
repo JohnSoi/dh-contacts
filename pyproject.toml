@@ -7,10 +7,12 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+pydantic = "^2.11.5"
+fastapi = "^0.115.12"
+email-validator = "^2.2.0"
 
 [tool.poetry.group.dh.dependencies]
 dh-platform = {git = "https://github.com/JohnSoi/dh-platform.git"}
-dh-access = {git = "https://github.com/JohnSoi/dh-access.git"}
 
 [tool.poetry.group.dev.dependencies]
 black = "^25.1.0"
@@ -22,3 +24,6 @@ pylint = "^3.3.7"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = "too-few-public-methods"
