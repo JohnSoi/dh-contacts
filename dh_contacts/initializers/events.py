@@ -1,5 +1,3 @@
-from venv import logger
-
 from dh_platform.patterns.message_bus import message_bus
 from dh_users.schemas.events import UserValidateEvent, UserAddEvent
 
