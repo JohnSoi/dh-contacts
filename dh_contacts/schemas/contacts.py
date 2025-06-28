@@ -20,3 +20,22 @@ class PublicContactData(BaseModel):
     type: ContactType
     value: str
     is_verify: bool
+
+
+class PrivateContactData(BaseModel):
+    """
+    Публичные данные КД
+
+    Attributes:
+        entity_id (int): Идентификатор связанной сущности
+        entity_type (str): Тип связанной сущности
+        value (str): Значение контакта
+        contact_type (int): Тип контактных данных
+        is_primary (bool): Основной контакт
+    """
+
+    entity_id: int
+    entity_type: str
+    value: str
+    contact_type: int
+    is_primary: bool

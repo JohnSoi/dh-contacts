@@ -7,7 +7,7 @@ from fastapi import status
 
 
 class EmailIncorrect(BaseAppException):
-    """Некорректный адре электронной почты"""
+    """Некорректный адрес электронной почты"""
 
     _DETAIL = "Введен не корректный адрес электронной почты"
     _CODE = status.HTTP_422_UNPROCESSABLE_ENTITY
