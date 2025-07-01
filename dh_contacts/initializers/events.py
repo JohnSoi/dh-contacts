@@ -30,6 +30,9 @@ async def _create_contact_data(data: UserAddEvent) -> None:
 
 
 async def _delete_contact_data(data: UserDeleteEvent) -> None:
+    if not data.force_delete:
+        return
+
     contacts: list[ContactModel] = await ContactService.list(
         {"entity_id": data.user_id, "entity_type": "user"}
     )
